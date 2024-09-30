@@ -66,6 +66,15 @@
 				"@hazmi35/eslint-config"
 			],
 			"groupName": "TypeScript & ESLint tooling"
+		},
+		{
+			"matchPackageNames": [
+				"node", 
+				"docker.io/library/node",
+				"ghcr.io/hazmi35/node", 
+				"docker.io/hazmi35/node"
+			],
+			"groupName": "Node.js Runtime"
 		}
 	]
 }
