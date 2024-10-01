@@ -17,14 +17,6 @@
 	"timezone": "Asia/Jakarta",
 	"packageRules": [
 		{
-			"matchUpdateTypes": [
-				"minor",
-				"patch"
-			],
-			"matchCurrentVersion": "!/^0/",
-			"automerge": true
-		},
-		{
 			"matchPackageNames": [
 				"drizzle-orm",
 				"drizzle-kit"
