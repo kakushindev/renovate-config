@@ -5,7 +5,6 @@
 		":semanticCommits",
 		"group:allNonMajor",
 		"group:linters",
-		"helpers:pinGitHubActionDigests",
 		"security:openssf-scorecard"
 	],
 	"labels": [
