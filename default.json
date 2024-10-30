@@ -1,71 +1,77 @@
 {
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": [
-		"config:base",
-		":semanticCommits",
-		"group:allNonMajor",
-		"group:linters",
-		"security:openssf-scorecard"
-	],
-	"labels": [
-		"meta: dependencies"
-	],
-	"schedule": [
-		"before 6am"
-	],
-	"timezone": "Asia/Jakarta",
-	"packageRules": [
-		{
-			"matchPackageNames": [
-				"drizzle-orm",
-				"drizzle-kit"
-			],
-			"groupName": "Drizzle"
-		},
-		{
-			"matchPackageNames": [
-				"pg",
-				"@types/pg"
-			],
-			"groupName": "node-pg"
-		},
-		{
-			"matchManagers": [
-				"dockerfile",
-				"docker-compose"
-			],
-			"groupName": "Docker"
-		},
-		{
-			"matchManagers": [
-				"github-actions"
-			],
-			"groupName": "CI/CD"
-		},
-		{
-			"matchPackageNames": [
-				"@sapphire/*"
-			],
-			"groupName": "Sapphire"
-		},
-		{
-			"matchPackageNames": [
-				"@typescript-eslint/*",
-				"eslint",
-				"typescript-eslint",
-				"typescript",
-				"@hazmi35/eslint-config"
-			],
-			"groupName": "TypeScript & ESLint tooling"
-		},
-		{
-			"matchPackageNames": [
-				"node", 
-				"docker.io/library/node",
-				"ghcr.io/hazmi35/node", 
-				"docker.io/hazmi35/node"
-			],
-			"groupName": "Node.js Runtime"
-		}
-	]
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "extends": [
+        "config:base",
+        ":semanticCommits",
+        "group:allNonMajor",
+        "group:linters",
+        "security:openssf-scorecard"
+    ],
+    "labels": [
+        "meta: dependencies"
+    ],
+    "schedule": [
+        "before 6am"
+    ],
+    "timezone": "Asia/Jakarta",
+    "packageRules": [
+        {
+            "matchPackageNames": [
+                "drizzle-orm",
+                "drizzle-kit"
+            ],
+            "groupName": "Drizzle"
+        },
+        {
+            "matchPackageNames": [
+                "pg",
+                "@types/pg"
+            ],
+            "groupName": "node-pg"
+        },
+        {
+            "matchManagers": [
+                "dockerfile",
+                "docker-compose"
+            ],
+            "groupName": "Docker"
+        },
+        {
+            "matchManagers": [
+                "github-actions"
+            ],
+            "groupName": "CI/CD"
+        },
+        {
+            "matchPackageNames": [
+                "@sapphire/*"
+            ],
+            "groupName": "Sapphire"
+        },
+        {
+            "matchPackageNames": [
+                "@typescript-eslint/*",
+                "eslint",
+                "typescript-eslint",
+                "typescript",
+                "@hazmi35/eslint-config"
+            ],
+            "groupName": "TypeScript & ESLint tooling"
+        },
+        {
+            "matchPackageNames": [
+                "node",
+                "docker.io/library/node",
+                "ghcr.io/hazmi35/node",
+                "docker.io/hazmi35/node"
+            ],
+            "groupName": "Node.js Runtime"
+        },
+        {
+            "matchDepTypes": [
+                "packageManager"
+            ],
+            "groupName": "Package Managers"
+        }
+    ]
 }
