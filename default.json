@@ -2,10 +2,8 @@
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
     "extends": [
         "config:base",
-        ":semanticCommits",
         "group:allNonMajor",
-        "group:linters",
-        "security:openssf-scorecard"
+        ":semanticCommits"
     ],
     "labels": [
         "meta: dependencies"
