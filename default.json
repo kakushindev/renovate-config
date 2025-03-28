@@ -11,5 +11,6 @@
     "schedule": [
         "before 6am"
     ],
-    "timezone": "Asia/Jakarta"
+    "timezone": "Asia/Jakarta",
+    "rangeStrategy": "bump"
 }
