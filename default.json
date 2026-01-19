@@ -1,16 +1,18 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": [
-        "config:base",
-        "group:allNonMajor",
-        ":semanticCommits"
-    ],
-    "labels": [
-        "meta: dependencies"
-    ],
-    "schedule": [
-        "before 6am"
-    ],
-    "timezone": "Asia/Jakarta",
-    "rangeStrategy": "bump"
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base", "group:allNonMajor", ":semanticCommits"],
+  "labels": ["meta: dependencies"],
+  "schedule": ["before 6am"],
+  "timezone": "Asia/Jakarta",
+  "rangeStrategy": "bump",
+  "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "pinDigests": true
+    },
+    {
+      "matchDatasources": ["github-actions"],
+      "pinDigests": true
+    }
+  ]
 }
